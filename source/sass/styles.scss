@@ -1,0 +1,59 @@
+/*
+    Document   : styles.scss
+    Created on : 10/06/2019, 22:49:15 PM
+    Author     : cesarmejia
+    Description:
+*/
+body {
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.holder {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Outer wrapper */
+.outer-wrapper {
+  margin-top: 75px;
+  position: relative;
+}
+
+/* Block */
+.block {
+  padding: 65px 0;
+
+  .header {
+    margin-bottom: 35px;
+  }
+
+  .title {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+@import "components/navigation";
+@import "components/contact-form";
+@import "components/footer";
+
+@import "sections/contact";

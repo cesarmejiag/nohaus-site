@@ -1,0 +1,57 @@
+/*
+    Document   : _contact-form.scss
+    Created on : 10/06/2019, 22:49:15 PM
+    Author     : cesarmejia
+    Description:
+*/
+.contact-form {
+  min-height: 150px;
+
+  /* Chrome/Opera/Safari */
+  ::-webkit-input-placeholder {
+    color: #999;
+  }
+  /* Firefox 19+ */
+  ::-moz-placeholder {
+    color: #999;
+  }
+  /* IE 10+ */
+  :-ms-input-placeholder {
+    color: #999;
+  }
+  /* Firefox 18- */
+  :-moz-placeholder {
+    color: #999;
+  }
+
+  input[type="text"],
+  textarea {
+    appearance: none;
+    border: 1px solid #dcdcdc;
+    border-radius: 0;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  textarea {
+    height: 125px;
+    resize: none;
+  }
+
+  input[type="submit"] {
+    appearance: none;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 0;
+    color: #666;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    max-width: 180px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+  }
+}

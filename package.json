@@ -1,0 +1,41 @@
+{
+  "name": "no-haus",
+  "version": "1.0.0",
+  "description": "HTML5 boilerplate.",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-favicons": "^2.3.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "typescript": "^3.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sexar/goplek-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "goplek",
+    "html5",
+    "css",
+    "js"
+  ],
+  "author": "cesarmejia <iconfidence@gmail.com>",
+  "contributors": [
+    "Daniel Pérez Atanacio <daniel.perez.atanacio@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sexar/goplek-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Sexar/goplek-boilerplate#readme"
+}

@@ -1,0 +1,8 @@
+# Files
+.DS_Store
+package-lock.json
+Thumbs.db
+
+# Folders
+.idea
+node_modules
