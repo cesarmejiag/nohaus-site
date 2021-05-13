@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "HTML5 boilerplate.",
   "main": "gulpfile.js",
-  "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-favicons": "^2.3.0",
     "gulp-livereload": "^4.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-typescript": "^5.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "typescript": "^3.4.5"
@@ -37,5 +39,18 @@
   "bugs": {
     "url": "https://github.com/Sexar/goplek-boilerplate/issues"
   },
-  "homepage": "https://github.com/Sexar/goplek-boilerplate#readme"
+  "homepage": "https://github.com/Sexar/goplek-boilerplate#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  }
 }

@@ -1,19 +1,19 @@
 const { src, dest, watch, series } = require( 'gulp' )
     , sass         = require( 'gulp-sass' )
     , autoprefixer = require( 'gulp-autoprefixer' )
+    , babel        = require( 'gulp-babel' )
+    , concat       = require( 'gulp-concat' )
     , uglify       = require( 'gulp-uglify' )
-    , ts           = require( 'gulp-typescript' )
     , favicons     = require( 'gulp-favicons' )
     , webp         = require( 'gulp-webp' )
     , livereload   = require( 'gulp-livereload' )
 
 
 const srcPath = {
-    fonts  : 'source/fonts'     ,
-    images : 'source/images'    ,
-    scripts: 'source/scripts'   ,
-    sass   : 'source/sass'      ,
-    ts     : 'source/typescript',
+    fonts  : 'source/fonts'  ,
+    images : 'source/images' ,
+    scripts: 'source/scripts',
+    sass   : 'source/sass'   ,
     root   : 'source'
 }
 
@@ -103,7 +103,6 @@ function scss ( callback ) {
     }
 
     const autoprefixerSettings = {
-        browsers: [ 'last 2 versions' ],
         cascade: false
     }
 
@@ -119,23 +118,18 @@ function scss ( callback ) {
  * Compiles ts files to generate production scripts.
  * @param {function} callback 
  */
-function typescript ( callback ) {
+function scripts ( callback ) {
     const files = [
-        `${ srcPath.ts }/scripts.ts`
+        `${ srcPath.scripts }/scripts.js`
     ]
 
-    const settings = {
-        allowJs: true,
-        module: 'amd',
-        outDir: `${ destPath.scripts }`,
-        outFile: `scripts.js`,
-        rootDir: `${ srcPath.ts }`,
-        sourceMap: true,
-        target: 'ES5'
+    const opts = {
+        presets: ['@babel/env']
     }
 
     return src( files )
-        .pipe( ts( settings ) )
+        .pipe( concat('scripts.min.js') )
+        .pipe( babel( opts ) )
         .pipe( uglify( ) )
         .pipe( dest( `${ destPath.scripts }` ) )
 }
@@ -177,8 +171,8 @@ exports.favico     = favico
 exports.fonts      = fonts
 exports.images     = images
 exports.scss       = scss
-exports.typescript = typescript
+exports.scripts    = scripts
 exports.watcher    = watcher
 exports.webpImages = webpImages
 
-exports.build = series( favico, fonts, images, scss, typescript )
+exports.build = series( favico, fonts, images, scss, scripts )
