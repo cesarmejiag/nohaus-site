@@ -6,12 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> -->
 
-        <title>PL Boilerplate</title>
-        <meta name="description" content="page-description">
+        <title>NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.</title>
+        <meta name="description" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
         <meta name="keywords" content="page-keywords">
         <meta name="author" content="Goplek">
-        <!--<meta name="robots" content="INDEX, FOLLOW, ARCHIVE">-->
-        <meta name="robots" content="NOINDEX, NOFOLLOW, NOARCHIVE">
+        <meta name="robots" content="INDEX, FOLLOW, ARCHIVE">
 
         <!-- Href lang -->
         <link rel="alternate" hreflang="es" href="page-url" />
@@ -22,22 +21,22 @@
         <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
 
         <!-- Schema properties -->
-        <meta itemprop="name" content="page-title">
-        <meta itemprop="description" content="page-description">
+        <meta itemprop="name" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
+        <meta itemprop="description" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
         <meta itemprop="url" content="page-url">
         <meta itemprop="image" content="image-url">
 
         <!-- Open Graph properties -->
         <meta property="fb:app_id" content="app-id">
         <meta property="og:site_name" content="name">
-        <meta property="og:title" content="page-title">
-        <meta property="og:description" content="page-description">
+        <meta property="og:title" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
+        <meta property="og:description" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
         <meta property="og:url" content="page-url">
         <meta property="og:image" content="image-url">
         <meta property="og:type" content="website">
 
         <!-- Twitter integration -->
-        <meta name="twitter:title" content="page-title">
+        <meta name="twitter:title" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
         <meta name="twitter:url" content="page-url">
         <meta name="twitter:image" content="image-url">
         <meta name="twitter:card" content="summary">
@@ -68,6 +67,9 @@
         <!-- Disable automatic detection of possible phone numbers in a webpage in Safari on iOS. -->
         <meta name="format-detection" content="telephone=no">
 
+        <!-- Bootstrap Styles -->
+        <link href="design/styles/vendor/bootstrap.min.css" rel="stylesheet">
+
         <!-- Page Styles -->
         <link href="design/styles/styles.css" rel="stylesheet">
 
@@ -82,7 +84,7 @@
                 <div class="container-fluid">
                     <!-- Logo -->
                     <a class="logo" href="/">
-                        <img alt="Goplek - Web Studio" class="img-responsive" src="design/imgs/logo.svg">
+                        <img alt="NoHaus Co. logo" class="img-responsive" src="design/images/logo.svg">
                     </a>
 
                     <!-- List Wrapper -->
@@ -90,7 +92,10 @@
                         <button class="close-list-btn visible-xs">x</button>
 
                         <ul class="list">
-                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Productos y Servicios</a></li>
+                            <li><a href="#">Modelos</a></li>
+                            <li><a href="#">Showroom</a></li>
                             <li><a href="#">Contacto</a></li>
                         </ul>
                     </div>
@@ -108,57 +113,198 @@
         <!-- Outer wrapper -->
         <div class="outer-wrapper">
 
-            <!-- Block  -->
-            <section class="block " id="">
+            <!-- Block Cover -->
+            <section class="block cover" id="home">
                 <div class="holder">
                     <div class="container-fluid">
-                        <div class="header">
-                            <!-- Block Header -->
-                        </div>
                         <div class="content">
-                            <!-- Block Content -->
+                            <div class="text"><strong>where we're going we don't need roads</strong></div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- /. -->
+            <!-- /.Cover -->
+
+            <!-- Block Our story -->
+            <section class="block our-story" id="nuestra-historia">
+                <div class="holder">
+                    <div class="container-fluid">
+                        <div class="header">
+                            <h2>Nuestra Empresa</h2>
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="text">
+                                        <p>Empresa Mexicana que nace por el amor a la naturaleza y exploración, somos jóvenes que disfrutan de estar afuera; de no necesitar muros ni techos.</p>
+                                        <p>Nos gusta alejarnos de todo para disfrutar de todo lo que el planeta tiene para ofrecer sin tener que renunciar a la experiencia de comida de calidad.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="image">
+                                        <img src="design/images/our-story-image.jpg" alt="Nuestra historia imagen.">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Our story -->
+
+            <!-- Block Video -->
+            <section class="block video-ribbon" id="video">
+                <div class="video"></div>
+                <div class="holder">
+                    <div class="container-fluid">
+                        <div class="header"></div>
+                        <div class="content">
+                            <p>Nos gusta el fuego y el humo, tenemos curiosidad y esta nos lleva a explorar los sabores que la naturaleza nos da con técnicas de cocción basadas en fuego directo. Esto nos lleva a usar el humo como sazonador de lo que el planeta tiene para ofrecer</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Video -->
+
+            <!-- Block Us -->
+            <section class="block us" id="nosotros">
+                <div class="holder">
+                    <div class="container-fluid">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div>
+                                        <img src="design/images/us-image-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="text">
+                                        <p>Empezamos con un prototipo para uso personal en 2017 el cual ha recorrido miles de kilómetros, en 2020 decidimos mejorar este prototipo para compartir la experiencia como regalo a amigos y al ver la versatilidad de un modelo configurable decidimos lanzarnos a producirlo en masa para los exploradores modernos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Us -->
+
+            <!-- Block Products and services -->
+            <section class="block products-and-services" id="productos-y-servicios">
+                <div class="holder">
+                    <div class="container-fluid">
+                        <div class="header">
+                            <h2>Productos y Servicios</h2>
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="icon"><img src="design/images/products-remolques.svg" alt=""></div>
+                                        <div class="text">Configuración y venta de remolques asador</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="icon"><img src="design/images/products-accesorios.svg" alt=""></div>
+                                        <div class="text">venta de equipo y accesorios para NOHAUS y mejora de experiencia</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="icon"><img src="design/images/products-clases.svg" alt=""></div>
+                                        <div class="text">Clases de cocina y renta de equipo para eventos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Products and services -->
+
+            <!-- Block Our models -->
+            <section class="block our-models" id="nuestros-modelos">
+                <div class="holder">
+                    <div class="container-fluid">
+                        <div class="header">
+                            <h2>Nuestros Modelos</h2>
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="product">
+                                        <div class="image">
+                                            <img src="" alt="">
+                                        </div>
+                                        <h3 class="name">BIG HAUS</h3>
+                                        <div class="desc">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="product">
+                                        <div class="image">
+                                            <img src="" alt="">
+                                        </div>
+                                        <h3 class="name">TINY HAUS</h3>
+                                        <div class="desc">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Our models -->
+
+            <!-- Block Showroom -->
+            <section class="block image-ribbon" id="showroom">
+                <div class="holder">
+                    <div class="container-fluid">
+                        <div class="content">
+                            <div class="text">
+                                <strong>Showroom en Valle de Bravo Próxima apertura</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Showroom -->
             
             <!-- Block Contact -->
             <section class="block contact" id="contacto">
                 <div class="holder">
                     <div class="container-fluid">
-                        <div class="header">
-                            <h2 class="title">Contacto</h2>
-                        </div>
-                        <div class="content">
-
-                            <!-- Contact Info -->
-                            <div class="contact-info">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="phones">
-                                            <div><a href="tel:0000000000">(000) 000 0000</a></div>
-                                            <div><a href="tel:0000000000">(000) 000 0000</a></div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="header">
+                                    <h2 class="title">Contacto</h2>
+                                </div>
+                                <div class="content">
+                                    <div class="text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                                     </div>
-
-                                    <div class="col-sm-6">
-                                        <div class="address">
-                                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                                        </div>
+                                    <div class="image">
+                                        <img src="design/images/us-image-1.jpg" alt="Contact imagen">
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Contact Form -->
-                            <form class="contact-form">
-                                <input name="Nombre" placeholder="Nombre" type="text">
-                                <input name="Email" placeholder="Email" type="text">
-                                <textarea name="Mensaje" placeholder="Mensaje"></textarea>
-
-                                <input type="submit" value="Enviar">
-                            </form>
-
+                            <div class="col-sm-6">
+                                <!-- Contact Form -->
+                                <form class="contact-form">
+                                    <input name="Nombre" placeholder="Nombre" type="text">
+                                    <input name="Email" placeholder="Email" type="text">
+                                    <textarea name="Mensaje" placeholder="Mensaje"></textarea>
+    
+                                    <input type="submit" value="Enviar">
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -179,7 +325,7 @@
 
                             <div class="col-sm-6 col-xs-6">
                                 <a class="goplek-logo" href="#">
-                                    <img alt="Goplek - Web Studio" class="img-responsive" src="design/imgs/logo.svg">
+                                    <img alt="Goplek - Web Studio" class="img-responsive" src="design/images/logo.svg">
                                 </a>
                             </div>
                         </div>
@@ -189,6 +335,6 @@
         </div>
 
         <!-- Page Scripts -->
-        <script src="design/scripts/scripts.js"></script>
+        <script src="design/scripts/scripts.min.js"></script>
     </body>
 </html>

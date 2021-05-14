@@ -14,6 +14,7 @@ const srcPath = {
     images : 'source/images' ,
     scripts: 'source/scripts',
     sass   : 'source/sass'   ,
+    styles : 'source/styles' ,
     root   : 'source'
 }
 
@@ -136,6 +137,20 @@ function scripts ( callback ) {
 
 
 /**
+ * Copy styles to production folder.
+ * @param {function} callback 
+ */
+function styles (callback) {
+    const files = [
+        `${ srcPath.styles }/**/*.*`
+    ]
+
+    return src ( files )
+        .pipe( dest( `${ destPath.styles }` ) )
+}
+
+
+/**
  * Handle watch event.
  * @param {function} callback 
  */
@@ -144,12 +159,12 @@ function watcher ( callback ) {
         `${ srcPath.fonts }/**/*.{otf,ttf,woff,svg}`,
         `${ srcPath.imgs }/**/*.{jpg,jpeg,svg,png}`,
         `${ srcPath.sass }/**/*.scss`,
-        `${ srcPath.ts }/**/*.ts`
+        `${ srcPath.scripts }/**/*.js`
     ]
 
     livereload.listen()
 
-    return watch( files, series( scss, typescript ) )
+    return watch( files, series( scss, scripts ) )
 }
 
 
@@ -172,7 +187,8 @@ exports.fonts      = fonts
 exports.images     = images
 exports.scss       = scss
 exports.scripts    = scripts
+exports.styles     = styles
 exports.watcher    = watcher
 exports.webpImages = webpImages
 
-exports.build = series( favico, fonts, images, scss, scripts )
+exports.build = series( favico, fonts, images, scss, scripts, styles )
