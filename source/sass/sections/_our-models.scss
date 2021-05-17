@@ -1,0 +1,72 @@
+/*
+    Document   : _our-models.scss
+    Created on : 10/06/2019, 22:49:15 PM
+    Author     : cesarmejia
+    Description:
+*/
+.our-models {
+  background-color: #F2E8E2;
+  padding-top: 30px;
+
+  .header {
+    transform: translate(0, -100%);
+  }
+
+  .title {
+    color: #0A3E3A;
+    line-height: 100%;
+    opacity: .08;
+  }
+
+  .col-sm-6:first-child {
+    .model {
+      margin-left: auto;
+    }
+  }
+
+  .model {
+    background-color: #00524C;
+    color: #fff;
+    max-width: 360px;
+    padding: 10px 10px 25px;
+
+    .image {
+      margin-bottom: 30px;
+    }
+
+    .name {
+      color: #EE7623;
+      font-family: "MC Milton";
+      font-size: 26px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .desc {
+      text-align: center;
+    }
+  }
+
+  .logo {
+    margin: 40px auto 0;
+    max-width: 49px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our-models {
+    padding-top: 10px;
+
+    .col-sm-6:first-child {
+      .model {
+        margin-bottom: 50px;
+        margin-left: 0;
+      }
+    }
+
+    .header {
+      transform: translate(0, -40%);
+    }
+  }
+}
