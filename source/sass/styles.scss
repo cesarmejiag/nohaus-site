@@ -140,7 +140,8 @@ body {
   /* Block */
   .block {
     .title {
-      font-size: 48px;
+      // font-size: 48px;
+      font-size: 43px;
     }
 
     &.halves {
@@ -177,7 +178,7 @@ body {
         }
       }
 
-      &.inverted-halves {
+      &.halves-inverted {
         .half {
           &:first-child {
             &::before {
@@ -200,6 +201,7 @@ body {
 @import "components/contact-form";
 @import "components/footer";
 
+@import "sections/us";
 @import "sections/products-and-services";
 @import "sections/our-models";
 @import "sections/showroom";

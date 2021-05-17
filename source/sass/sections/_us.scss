@@ -1,0 +1,72 @@
+/*
+    Document   : _us.scss
+    Created on : 10/06/2019, 22:49:15 PM
+    Author     : cesarmejia
+    Description:
+*/
+.us {
+  padding: 0 0;
+
+  &.halves {
+    .half {
+      padding-bottom: 230px;
+      padding-top: 230px;
+    }
+  }
+
+  .carrousel {
+    max-width: 407px;
+  }
+
+  .wrapper {
+    margin-left: auto;
+    max-width: 479px;
+    padding-bottom: 40px;
+    position: relative;
+    &::after {
+      border-bottom: 2px solid #ee7623;
+      bottom: 0;
+      content: "";
+      display: block;
+      left: 50%;
+      margin-left: -25px;
+      position: absolute;
+      width: 50px;
+    }
+  }
+
+  .logo {
+    margin: 0 auto 20px;
+    max-width: 69px;
+  }
+
+  .text {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .us {
+    &.halves {
+      .half {
+        padding-bottom: 100px;
+        padding-top: 100px;
+      }
+    }
+
+    .carrousel,
+    .wrapper {
+      margin: 0 auto;
+    }
+
+    .logo {
+      max-width: 49px;
+    }
+
+    .text {
+      font-size: 14px;
+    }
+  }
+}
