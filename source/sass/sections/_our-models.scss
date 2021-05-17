@@ -5,7 +5,7 @@
     Description:
 */
 .our-models {
-  background-color: #F2E8E2;
+  background-color: #f2e8e2;
   padding-top: 30px;
 
   .header {
@@ -13,9 +13,9 @@
   }
 
   .title {
-    color: #0A3E3A;
+    color: #0a3e3a;
     line-height: 100%;
-    opacity: .08;
+    opacity: 0.08;
   }
 
   .col-sm-6:first-child {
@@ -25,7 +25,7 @@
   }
 
   .model {
-    background-color: #00524C;
+    background-color: #00524c;
     color: #fff;
     max-width: 360px;
     padding: 10px 10px 25px;
@@ -35,7 +35,7 @@
     }
 
     .name {
-      color: #EE7623;
+      color: #ee7623;
       font-family: "MC Milton";
       font-size: 26px;
       margin-bottom: 10px;
@@ -60,9 +60,12 @@
 
     .col-sm-6:first-child {
       .model {
-        margin-bottom: 50px;
-        margin-left: 0;
+        margin: 0 auto 50px;
       }
+    }
+
+    .model {
+      margin: 0 auto;
     }
 
     .header {
