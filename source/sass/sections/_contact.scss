@@ -5,11 +5,71 @@
     Description:
 */
 .contact {
-  .contact > .holder {
-    max-width: 680px;
+  &.halves .half {
+    padding-bottom: 50px;
+    padding-top: 185px;
   }
 
-  .contact-info {
-    margin-bottom: 35px;
+  .header,
+  .content {
+    color: #fff;
+    max-width: 365px;
+  }
+
+  .title {
+    color: #fff;
+    opacity: 0.08;
+    text-align: initial;
+  }
+
+  .text {
+    margin-bottom: 95px;
+  }
+
+  .image {
+    max-width: 407px;
+    transform: translate(60%, 0);
+  }
+
+  .contact-form {
+    margin-left: auto;
+    max-width: 410px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .contact {
+    .image {
+      margin-left: auto;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    &.halves .half {
+      padding-bottom: 40px; 
+      padding-top: 90px;
+    }
+
+    .header,
+    .content {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+
+    .text {
+      margin-bottom: 30px;
+    }
+
+    .image {
+      margin-bottom: -130px;
+    }
+
+    .contact-form {
+      margin: 80px auto 0;
+      max-width: 500px;
+    }
   }
 }

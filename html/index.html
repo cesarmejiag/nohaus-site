@@ -167,17 +167,17 @@
             <!-- /.Video -->
 
             <!-- Block Us -->
-            <section class="block us" id="nosotros">
+            <section class="block us halves halves-inverted" id="nosotros">
                 <div class="holder">
                     <div class="container-fluid">
                         <div class="content">
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 half">
                                     <div>
                                         <img alt="" class="img-responsive" src="design/images/us-image-1.jpg">
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 half">
                                     <div class="text">
                                         <p>Empezamos con un prototipo para uso personal en 2017 el cual ha recorrido miles de kilómetros, en 2020 decidimos mejorar este prototipo para compartir la experiencia como regalo a amigos y al ver la versatilidad de un modelo configurable decidimos lanzarnos a producirlo en masa para los exploradores modernos</p>
                                     </div>
@@ -228,7 +228,7 @@
                 <div class="holder">
                     <div class="container-fluid">
                         <div class="header">
-                            <h2>Nuestros Modelos</h2>
+                            <h2 class="title">Nuestros Modelos</h2>
                         </div>
                         <div class="content">
                             <div class="row">
@@ -278,11 +278,11 @@
             <!-- /.Showroom -->
             
             <!-- Block Contact -->
-            <section class="block contact" id="contacto">
+            <section class="block contact halves" id="contacto">
                 <div class="holder">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 half">
                                 <div class="header">
                                     <h2 class="title">Contacto</h2>
                                 </div>
@@ -295,14 +295,56 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 half">
                                 <!-- Contact Form -->
                                 <form class="contact-form">
-                                    <input name="Nombre" placeholder="Nombre" type="text">
-                                    <input name="Email" placeholder="Email" type="text">
-                                    <textarea name="Mensaje" placeholder="Mensaje"></textarea>
-    
-                                    <input type="submit" value="Enviar">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="input-container">
+                                                <input id="contact-form-name" data-clue="Escribe un nombre válido." data-validate="notEmpty" name="Nombre" type="text">
+                                                <label for="contact-form-name">Escribe tu nombre*</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="input-container">
+                                                <input id="contact-form-email" data-clue="Escribe un correo válido." data-validate="Email" name="Email" type="text">
+                                                <label for="contact-form-email">Escribe tu correo*</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="input-container">
+                                                <input id="contact-form-phone" data-clue="Escribe un número válido." data-validate="Phone" name="Teléfono" type="text">
+                                                <label for="contact-form-phone">Escribe un número de 10 dígitos*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="input-container">
+                                                <select id="contact-form-model" data-clue="Selecciona un modelo." data-validate="notEmpty" name="Modelo">
+                                                    <option></option>
+                                                </select>
+                                                <label name="contact-form-model">Selecciona el modelo de tu agrado*</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="input-container">
+                                                <textarea id="contact-form-message" data-clue="Escribe tu mensaje." data-validate="notEmpty" name="Mensaje"></textarea>
+                                                <label for="contact-form-message">Escribe tu mensaje</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="input-container">
+                                                <input type="submit" value="Enviar">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>

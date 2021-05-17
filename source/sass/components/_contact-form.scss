@@ -24,34 +24,51 @@
     color: #999;
   }
 
+  .input-container {
+    margin-bottom: 15px;
+  }
+
   input[type="text"],
+  select,
   textarea {
     appearance: none;
-    border: 1px solid #dcdcdc;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #00524C;
     border-radius: 0;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    outline: none;
     padding: 5px;
     width: 100%;
   }
 
   textarea {
-    height: 125px;
+    height: 120px;
     resize: none;
+  }
+
+  label {
+    color: #00524C;
+    font-size: 10px;
+    font-weight: normal;
   }
 
   input[type="submit"] {
     appearance: none;
-    background-color: #dcdcdc;
+    background-color: #00524C;
     border: none;
     border-radius: 0;
-    color: #666;
+    color: #fff;
     cursor: pointer;
     display: block;
+    font-family: 'MC Milton';
+    letter-spacing: 4px;
     margin-left: auto;
-    max-width: 180px;
-    padding: 5px;
+    max-width: 125px;
+    padding: 8px 5px;
     text-align: center;
+    text-transform: uppercase;
     width: 100%;
   }
 }
