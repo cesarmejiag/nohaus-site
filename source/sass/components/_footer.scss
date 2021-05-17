@@ -5,14 +5,39 @@
     Description:
 */
 .footer {
-  background-color: #f1f1f1;
-  color: #9a9a9a;
-  font-size: 11px;
-  padding: 15px 0;
+  background-color: #191818;
+  color: #fff;
+  font-size: 9px;
+  padding: 65px 0;
 
-  .goplek-logo {
-    display: block;
-    margin-left: auto;
-    width: 50px;
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  .logo {
+    display: block; 
+    margin: 0 auto;
+    max-width: 51px;
+  }
+
+  .copyright {
+    text-align: right;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 25px 0;
+
+    .copyright {
+      margin-top: 45px;
+      text-align: center;
+    }
   }
 }
