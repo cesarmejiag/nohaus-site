@@ -1,0 +1,55 @@
+/*
+    Document   : _our-story.scss
+    Created on : 10/06/2019, 22:49:15 PM
+    Author     : cesarmejia
+    Description:
+*/
+
+.our-story {
+  background-color: #f2e8e2;
+  position: relative;
+  z-index: 1;
+
+  b {
+    color: #00524c;
+    font-family: "Gotham Medium";
+    font-weight: normal;
+  }
+
+  .header {
+    max-width: 315px;
+    transform: translate(-20%, 50%);
+  }
+
+  .title {
+    color: #0A3E3A;
+    opacity: .08;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .image {
+    margin-bottom: -25%;
+    margin-left: auto;
+    max-width: 510px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our-story {
+    .header {
+      transform: translate(0, 65%);
+    }
+    
+    .title {
+      text-align: initial;
+    }
+
+    .text {
+      font-size: 16px;
+      margin-bottom: 60px;
+    }
+  }
+}
