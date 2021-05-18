@@ -52,5 +52,8 @@
       "last 1 safari version",
       "last 1 ie version"
     ]
+  },
+  "dependencies": {
+    "gulp-typescript": "^6.0.0-alpha.1"
   }
 }

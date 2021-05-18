@@ -4,18 +4,19 @@ const { src, dest, watch, series } = require( 'gulp' )
     , babel        = require( 'gulp-babel' )
     , concat       = require( 'gulp-concat' )
     , uglify       = require( 'gulp-uglify' )
+    , ts           = require( 'gulp-typescript' )
     , favicons     = require( 'gulp-favicons' )
     , webp         = require( 'gulp-webp' )
     , livereload   = require( 'gulp-livereload' )
 
 
 const srcPath = {
-    fonts  : 'source/fonts'  ,
-    images : 'source/images' ,
-    scripts: 'source/scripts',
-    sass   : 'source/sass'   ,
-    styles : 'source/styles' ,
-    root   : 'source'
+    fonts     : 'source/fonts'  ,
+    images    : 'source/images' ,
+    scripts   : 'source/scripts',
+    styles    : 'source/styles' ,
+    typescript: 'source/typescript',
+    root      : 'source'
 }
 
 const destPath = {
@@ -95,32 +96,12 @@ function images ( callback ) {
 
 
 /**
- * Compiles sass files to generate production styles.
- * @param {function} callback 
- */
-function scss ( callback ) {
-    const sassSettings = {
-        outputStyle: 'compressed'
-    }
-
-    const autoprefixerSettings = {
-        cascade: false
-    }
-
-    return src( `${ srcPath.sass }/styles.scss` )
-        .pipe( sass( sassSettings ) )
-        .pipe( autoprefixer( autoprefixerSettings ) )
-        .pipe( dest( `${ destPath.styles }` ) )
-
-}
-
-
-/**
  * Compiles ts files to generate production scripts.
  * @param {function} callback 
  */
 function scripts ( callback ) {
     const files = [
+        `!${ srcPath.scripts }/vendor`,
         `${ srcPath.scripts }/scripts.js`
     ]
 
@@ -137,16 +118,84 @@ function scripts ( callback ) {
 
 
 /**
- * Copy styles to production folder.
+ * Compiles sass files to generate production styles.
  * @param {function} callback 
  */
 function styles (callback) {
     const files = [
-        `${ srcPath.styles }/**/*.*`
+        `!${ srcPath.styles }/vendor`,
+        `${ srcPath.styles }/styles.scss`
+    ]
+
+    const sassSettings = {
+        outputStyle: 'compressed'
+    }
+
+    const autoprefixerSettings = {
+        cascade: false
+    }
+
+    return src( files )
+        .pipe( sass( sassSettings ) )
+        .pipe( autoprefixer( autoprefixerSettings ) )
+        .pipe( dest( `${ destPath.styles }` ) )
+}
+
+
+/**
+ * Compiles ts files to generate production scripts.
+ * @param {function} callback 
+ */
+function typescript (callback) {
+    const files = [
+        `${ srcPath.typescript }/core/**/*.ts`,
+        `${ srcPath.typescript }/util/**/*.ts`,
+        `${ srcPath.typescript }/*.ts`
+    ]
+
+    const settings = {
+        allowJs: true,
+        module: 'amd',
+        noImplicitAny: false,
+        outDir: `${ destPath.scripts }`,
+        outFile: `pl.js`,
+        rootDir: `${ srcPath.typescript }`,
+        sourceMap: true,
+        target: 'ES5'
+    }
+
+    return src( files )
+        .pipe( ts( settings ) )
+        .pipe( uglify( ) )
+        .pipe( dest( `${ destPath.scripts }` ) )
+}
+
+
+/**
+ * Copy scripts to production folder.
+ * @param {function} callback
+ */
+function vendorStyles (callback) {
+    const files = [
+        `${ srcPath.styles }/vendor/**/*.*`
     ]
 
     return src ( files )
-        .pipe( dest( `${ destPath.styles }` ) )
+        .pipe( dest( `${ destPath.styles }/vendor` ) )
+}
+
+
+/**
+ * Copy styles to production folder.
+ * @param {function} callback
+ */
+function vendorScripts (callback) {
+    const files = [
+        `${ srcPath.scripts }/vendor/**/*.*`
+    ]
+
+    return src ( files )
+        .pipe( dest( `${ destPath.scripts }/vendor` ) )
 }
 
 
@@ -158,7 +207,7 @@ function watcher ( callback ) {
     const files = [
         `${ srcPath.fonts }/**/*.{otf,ttf,woff,svg}`,
         `${ srcPath.imgs }/**/*.{jpg,jpeg,svg,png}`,
-        `${ srcPath.sass }/**/*.scss`,
+        `${ srcPath.styles }/**/*.scss`,
         `${ srcPath.scripts }/**/*.js`
     ]
 
@@ -182,13 +231,15 @@ function webpImages ( callback ) {
 }
 
 
-exports.favico     = favico
-exports.fonts      = fonts
-exports.images     = images
-exports.scss       = scss
-exports.scripts    = scripts
-exports.styles     = styles
-exports.watcher    = watcher
-exports.webpImages = webpImages
+exports.favico        = favico
+exports.fonts         = fonts
+exports.images        = images
+exports.scripts       = scripts
+exports.styles        = styles
+exports.typescript    = typescript
+exports.vendorScripts = vendorScripts
+exports.vendorStyles  = vendorStyles
+exports.watcher       = watcher
+exports.webpImages    = webpImages
 
-exports.build = series( favico, fonts, images, scss, scripts, styles )
+exports.build = series( favico, fonts, images, scripts, styles, typescript, vendorScripts, vendorStyles )
