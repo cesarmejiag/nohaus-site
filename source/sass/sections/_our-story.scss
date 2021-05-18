@@ -39,6 +39,8 @@
 
 @media screen and (max-width: 767px) {
   .our-story {
+    padding-top: 0;
+
     .header {
       transform: translate(0, 65%);
     }

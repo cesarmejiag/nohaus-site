@@ -5,10 +5,9 @@
     Description:
 */
 .navigation {
-  background-color: #fff;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-  height: 70px;
-  padding: 10px 0;
+  background-color: transparent;
+  height: 130px;
+  padding: 40px 0 20px;
   position: fixed;
   right: 0;
   top: 0;
@@ -19,13 +18,13 @@
   .logo {
     display: block;
     float: left;
-    width: 85px;
+    width: 90px;
   }
 
   /* Navigation - List */
   .list {
     list-style: none;
-    margin: 0;
+    margin: 25px 0 0;
     padding: 0;
     text-align: right;
 
@@ -35,8 +34,10 @@
     }
 
     a {
-      color: #666;
-      line-height: 46px;
+      color: #fff;
+      font-family: "MC Milton";
+      font-size: 10px;
+      text-transform: uppercase;
     }
   }
 

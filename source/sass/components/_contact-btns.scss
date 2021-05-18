@@ -1,0 +1,64 @@
+/*
+    Document   : _contact-btns.scss
+    Created on : 10/06/2019, 22:49:15 PM
+    Author     : cesarmejia
+    Description:
+*/
+.contact-btns {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  z-index: 9;
+
+  a {
+    background-color: #EE7623;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    display: block;
+    margin-bottom: 25px;
+    padding: 12px 20px;
+    transition: transform 375ms;
+    transform: translate(10px, 0);
+    width: 75px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      transform: translate(0, 0);
+    }
+  }
+
+  img {
+    display: block;
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-btns {
+    bottom: 0;
+    left: 0;
+    right: auto;
+    top: auto;
+    width: 100%;
+
+    a {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      float: left;
+      height: 50px;
+      margin-bottom: 0;
+      transform: translate(0, 0);
+      width: 50%;
+      &:last-child {
+        background-color: #00524C;
+      }
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}
