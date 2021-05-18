@@ -11,6 +11,7 @@
   position: fixed;
   right: 0;
   top: 0;
+  transition: background 375ms, box-shadow 375ms, height 375ms, padding 375ms;
   width: 100%;
   z-index: 9;
 
@@ -18,7 +19,16 @@
   .logo {
     display: block;
     float: left;
+    transition: width 375ms;
     width: 90px;
+
+    svg {
+      display: block;
+      width: 100%;
+      .letters {
+        transition: fill 375ms;
+      }
+    }
   }
 
   /* Navigation - List */
@@ -27,6 +37,7 @@
     margin: 25px 0 0;
     padding: 0;
     text-align: right;
+    transition: margin 375ms;
 
     li {
       display: inline;
@@ -37,24 +48,51 @@
       color: #fff;
       font-family: "MC Milton";
       font-size: 10px;
+      padding-bottom: 5px;
+      position: relative;
+      text-decoration: none;
       text-transform: uppercase;
+      transition: color 375ms;
+      &::after {
+        border-bottom: 2px solid #ee7623;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 0);
+        transition: width 375ms;
+        width: 0;
+      }
+
+      &:hover,
+      &:focus {
+        &::after {
+          width: 100%;
+        }
+      }
     }
   }
 
   /* Navigation - Toggle Button */
   .toggle-btn {
-    background-color: transparent;
+    background-color: #ee7623;
     border: none;
-    float: right;
+    border-radius: 50em;
+    height: 25px;
     outline: none;
-    padding: 10px;
-    width: 50px;
+    padding: 5px 5px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0;
+    width: 25px;
 
     .bar {
-      background-color: #666;
+      background-color: #fff;
       display: block;
-      height: 3px;
-      margin-bottom: 5px;
+      height: 1px;
+      margin-bottom: 4px;
       width: 100%;
 
       &:last-child {
@@ -62,25 +100,69 @@
       }
     }
   }
+
+  &.inverted-color {
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    height: 90px;
+    padding: 20px 0;
+
+    /* Navigation - Logo */
+    .logo {
+      width: 64px;
+      svg .letters {
+        fill: #00524c;
+      }
+    }
+
+    /* Navigation - List */
+    .list {
+      margin: 15px 0 0;
+
+      a {
+        color: #00524c;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
-
   .navigation {
+    .logo {
+      float: none;
+      margin: 0 auto;
+      width: 75px;
+    }
+
     .list-wrapper {
       background-color: #fff;
-      height: 100%;
+      height: calc(100% - 109px);
       left: 0;
       opacity: 0;
       padding: 50px 20px 20px;
       position: fixed;
       transform: translateY(-100%);
       transition: opacity 375ms, transform 375ms;
-      top: 0;
+      top: 59px;
       width: 100%;
-      &.list-collapsed {
-        opacity: 1;
+      &.list-expanded {
+        opacity: .95;
         transform: translateY(0);
+        z-index: 1;
+      }
+
+      .list {
+        text-align: left;
+
+        li {
+          margin-bottom: 40px;
+          margin-left: 0;
+        }
+        
+        a {
+          color: #00524C;
+          font-size: 18px;
+        }
       }
 
       .close-list-btn {
@@ -109,6 +191,20 @@
         text-decoration: none;
       }
     }
+
+    &.list-visible,
+    &.inverted-color {
+      background-color: #fff;
+      height: 59px;
+      padding: 10px 10px;
+
+      .logo {
+        width: 50px;
+
+        svg .letters {
+          fill: #00524c;
+        }
+      }
+    }
   }
-  
 }
