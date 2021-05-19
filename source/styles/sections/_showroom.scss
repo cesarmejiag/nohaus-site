@@ -10,7 +10,16 @@
   position: relative;
   z-index: 1;
 
-  &::before {
+  .text {
+    color: #fff;
+    font-size: 35px;
+    margin: 0 auto;
+    max-width: 380px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .bg {
     background: no-repeat center center url("../images/showroom-image.jpg");
     background-size: cover;
     content: "";
@@ -23,17 +32,8 @@
     z-index: -1;
   }
 
-  .text {
-    color: #fff;
-    font-size: 35px;
-    margin: 0 auto;
-    max-width: 380px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
   .decoration {
-    bottom: -10%;
+    bottom: -20%;
     left: 10%;
     max-width: 94px;
     position: absolute;

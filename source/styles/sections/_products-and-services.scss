@@ -52,13 +52,24 @@
     }
   }
 
-  .bg {
-    background: no-repeat 120% 80% url("../images/services-bg.svg");
+  .bg-wrapper {
     height: 100%;
     left: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: -1;
+  }
+
+  .bg {
+    background: no-repeat center center url("../images/services-bg.svg");
+    background-size: cover;
+    bottom: 15%;
+    height: 502px;
+    right: 0;
+    position: absolute;
+    width: 638px;
     z-index: -1;
   }
 }
@@ -89,7 +100,10 @@
     }
 
     .bg {
-      background-size: contain;
+      bottom: 20%;
+      height: 321px;
+      right: -50%;
+      width: 408px;
     }
   }
 }

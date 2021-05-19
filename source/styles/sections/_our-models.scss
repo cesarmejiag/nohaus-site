@@ -6,10 +6,15 @@
 */
 .our-models {
   background-color: #f2e8e2;
-  padding-top: 30px;
+  padding-top: 130px;
+  position: relative;
 
   .header {
-    transform: translate(0, -100%);
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: -8%;
+    width: 100%;
   }
 
   .title {
@@ -56,7 +61,7 @@
 
 @media screen and (max-width: 767px) {
   .our-models {
-    padding-top: 10px;
+    padding-top: 100px;
 
     .col-sm-6:first-child {
       .model {
@@ -64,12 +69,12 @@
       }
     }
 
-    .model {
-      margin: 0 auto;
+    .header {
+      top: -5%;
     }
 
-    .header {
-      transform: translate(0, -40%);
+    .model {
+      margin: 0 auto;
     }
   }
 }
