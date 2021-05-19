@@ -34,10 +34,9 @@
   /* Navigation - List */
   .list {
     list-style: none;
-    margin: 25px 0 0;
-    padding: 0;
+    padding: 25px 0 0;
     text-align: right;
-    transition: margin 375ms;
+    transition: padding 375ms;
 
     li {
       display: inline;
@@ -117,7 +116,7 @@
 
     /* Navigation - List */
     .list {
-      margin: 15px 0 0;
+      padding: 15px 0 0;
 
       a {
         color: #00524c;

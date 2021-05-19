@@ -6,7 +6,66 @@
 */
 
 .cover {
+  align-items: center;
   background-color: black;
+  display: flex;
   height: 100vh;
-  padding: 0
+  min-height: 480px;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+  &::before {
+    background: rgba(0, 0, 0, .60);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: 0;
+  }
+
+  .text {
+    color: #fff;
+    font-family: "MC Milton";
+    font-size: 38px;
+    line-height: 100%;
+    margin-top: 40%;
+    padding-bottom: 20px;
+    position: relative;
+    &::after {
+      border-top: 4px solid #EE7623;
+      bottom: 0;
+      content: "";
+      display: block;
+      left: 0;
+      position: absolute;
+      width: 10%;
+    }
+  }
+
+  .bg {
+    background: no-repeat center center url("../images/cover-bg.jpg");
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
+
+@media screen and (max-width: 767px) {
+  .cover {
+    &::before {
+      width: 100%
+    }
+
+    .text {
+      font-size: 25px;
+    }
+  }
+}
+

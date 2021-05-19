@@ -37,9 +37,22 @@
 
     // Navigation
     (() => {
+        const options = qa('.scroll-to', navigation)
         const toggleBtn = q('.toggle-btn', navigation);
-        toggleBtn.addEventListener('click', expandMenu);
 
+        [].forEach.call(options, option => {
+            option.addEventListener('click', e => {
+                e.preventDefault();
+                const href = e.currentTarget.href
+                const key = href.substring(href.indexOf('#')).replace('/', '');
+
+                $('html, body').animate({
+                    scrollTop: $(key).offset().top - navigation.clientHeight
+                }, 375);
+            });
+        });
+
+        toggleBtn.addEventListener('click', expandMenu);
         changeNavColor();
     })();
 
