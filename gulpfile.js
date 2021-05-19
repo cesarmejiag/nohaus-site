@@ -213,7 +213,7 @@ function watcher ( callback ) {
 
     livereload.listen()
 
-    return watch( files, series( scss, scripts ) )
+    return watch( files, series( styles, scripts ) )
 }
 
 

@@ -342,51 +342,57 @@
                             </div>
                             <div class="col-sm-6 half">
                                 <!-- Contact Form -->
-                                <form class="contact-form">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="input-container">
-                                                <input id="contact-form-name" data-clue="Escribe un nombre válido." data-validate="notEmpty" name="Nombre" type="text">
-                                                <label for="contact-form-name">Escribe tu nombre*</label>
-                                            </div>
-                                        </div>
+                                <form class="contact-form" autocomplete="off">
+                                    <div class="message">
+                                        <div></div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="input-container">
-                                                <input id="contact-form-email" data-clue="Escribe un correo válido." data-validate="Email" name="Email" type="text">
-                                                <label for="contact-form-email">Escribe tu correo*</label>
+                                    <div class="inputs">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-container">
+                                                    <input id="contact-form-name" data-clue="Escribe un nombre válido." data-validate="notEmpty" name="Nombre" type="text">
+                                                    <label for="contact-form-name">Escribe tu nombre*</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="input-container">
-                                                <input id="contact-form-phone" data-clue="Escribe un número válido." data-validate="Phone" name="Teléfono" type="text">
-                                                <label for="contact-form-phone">Escribe un número de 10 dígitos*</label>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-container">
+                                                    <input id="contact-form-email" data-clue="Escribe un correo válido." data-validate="email" name="Email" type="text">
+                                                    <label for="contact-form-email">Escribe tu correo*</label>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="input-container">
-                                                <select id="contact-form-model" data-clue="Selecciona un modelo." data-validate="notEmpty" name="Modelo">
-                                                    <option></option>
-                                                </select>
-                                                <label name="contact-form-model">Selecciona el modelo de tu agrado*</label>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="input-container">
+                                                    <input id="contact-form-phone" data-clue="Escribe un número válido." data-validate="phone" maxlength="10" name="Teléfono" type="text">
+                                                    <label for="contact-form-phone">Escribe un número de 10 dígitos*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="input-container">
+                                                    <select id="contact-form-model" data-clue="Selecciona un modelo." data-validate="notEmpty" name="Modelo">
+                                                        <option value="Big Haus">Big Haus</option>
+                                                        <option value="Tini Haus">Tini Haus</option>
+                                                    </select>
+                                                    <label name="contact-form-model">Selecciona el modelo de tu agrado*</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="input-container">
-                                                <textarea id="contact-form-message" data-clue="Escribe tu mensaje." data-validate="notEmpty" name="Mensaje"></textarea>
-                                                <label for="contact-form-message">Escribe tu mensaje</label>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-container">
+                                                    <textarea id="contact-form-message" data-clue="Escribe tu mensaje." name="Mensaje"></textarea>
+                                                    <label for="contact-form-message">Escribe tu mensaje</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="input-container">
-                                                <input type="submit" value="Enviar">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="input-container">
+                                                    <input type="submit" value="Enviar">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -434,6 +440,7 @@
         <!-- ./Contact Buttons -->
 
         <!-- Page Scripts -->
+        <script src="design/scripts/pl.js"></script>
         <script src="design/scripts/scripts.min.js"></script>
     </body>
 </html>

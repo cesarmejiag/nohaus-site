@@ -6,6 +6,7 @@
 */
 .contact-form {
   min-height: 150px;
+  position: relative;
 
   /* Chrome/Opera/Safari */
   ::-webkit-input-placeholder {
@@ -24,8 +25,53 @@
     color: #999;
   }
 
+  &.loading,
+  &.error,
+  &.success {
+    .message {
+      display: flex;
+      visibility: visible;
+    }
+
+    .inputs {
+      visibility: hidden;
+    }
+  }
+
+  .message {
+    align-items: center;
+    color: #00524C;
+    display: none;
+    font-family: "MC Milton";
+    font-size: 24px;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 100%;
+  }
+
+  .input-clue {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
   .input-container {
     margin-bottom: 15px;
+    &.invalid {
+      input[type="text"],
+      select,
+      textarea {
+        border-bottom-color: #EE7623;
+      }
+
+      label {
+        color: #EE7623;
+      }
+    }
   }
 
   input[type="text"],
@@ -34,13 +80,18 @@
     appearance: none;
     background: transparent;
     border: none;
-    border-bottom: 1px solid #00524C;
+    border-bottom: 1px solid #00524c;
     border-radius: 0;
     display: block;
     margin-bottom: 5px;
     outline: none;
     padding: 5px;
+    transition: border 375ms;
     width: 100%;
+  }
+
+  select {
+    background: no-repeat 95% center url("../images/icon-dropdown.svg");
   }
 
   textarea {
@@ -49,26 +100,32 @@
   }
 
   label {
-    color: #00524C;
+    color: #00524c;
     font-size: 10px;
     font-weight: normal;
+    transition: color 375ms;
   }
 
   input[type="submit"] {
     appearance: none;
-    background-color: #00524C;
+    background-color: #00524c;
     border: none;
     border-radius: 0;
     color: #fff;
     cursor: pointer;
     display: block;
-    font-family: 'MC Milton';
+    font-family: "MC Milton";
     letter-spacing: 4px;
     margin-left: auto;
     max-width: 125px;
     padding: 8px 5px;
     text-align: center;
     text-transform: uppercase;
+    transition: background 375ms;
     width: 100%;
+    &:hover,
+    &:focus {
+      background-color: #EE7623;
+    }
   }
 }
