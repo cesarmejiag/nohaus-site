@@ -39,9 +39,20 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("../fonts/Gotham-Light.eot");
+  src: url("../fonts/Gotham-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Light.woff2") format("woff2"),
+    url("../fonts/Gotham-Light.woff") format("woff"), url("../fonts/Gotham-Light.ttf") format("truetype"),
+    url("../fonts/Gotham-Light.svg#Gotham-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   color: #333;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Gotham-Light", sans-serif;
   font-size: 14px;
 
   -webkit-font-smoothing: antialiased;
@@ -74,6 +85,10 @@ body {
 /* Outer wrapper */
 .outer-wrapper {
   position: relative;
+
+  &.margin-top {
+    margin-top: 90px;
+  }
 }
 
 /* Block */
@@ -218,3 +233,4 @@ body {
 @import "sections/our-models";
 @import "sections/showroom";
 @import "sections/contact";
+@import "sections/configurator";

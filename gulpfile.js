@@ -102,7 +102,9 @@ function images ( callback ) {
 function scripts ( callback ) {
     const files = [
         `!${ srcPath.scripts }/vendor`,
-        `${ srcPath.scripts }/scripts.js`
+        `${ srcPath.scripts }/scripts.js`,
+        `${ srcPath.scripts }/data.js`,
+        `${ srcPath.scripts }/configurador.js`
     ]
 
     const opts = {

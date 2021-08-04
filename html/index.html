@@ -7,9 +7,9 @@
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> -->
 
         <title>NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.</title>
-        <meta name="description" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
+        <meta name="description" content="Nuestros asadores son perfectos para salir de la vida de la ciudad y disfrutar de la naturaleza y el sabor del humo. Tenemos dos tamaños para adaptarnos a las necesidades de cada aventurero.">
         <meta name="keywords" content="page-keywords">
-        <meta name="author" content="Goplek">
+        <meta name="author" content="PageLab">
         <meta name="robots" content="INDEX, FOLLOW, ARCHIVE">
 
         <!-- Href lang -->
@@ -22,7 +22,7 @@
 
         <!-- Schema properties -->
         <meta itemprop="name" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
-        <meta itemprop="description" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
+        <meta itemprop="description" content="Nuestros asadores son perfectos para salir de la vida de la ciudad y disfrutar de la naturaleza y el sabor del humo. Tenemos dos tamaños para adaptarnos a las necesidades de cada aventurero.">
         <meta itemprop="url" content="http://www.nohaus.com.mx">
         <meta itemprop="image" content="image-url">
 
@@ -30,7 +30,7 @@
         <meta property="fb:app_id" content="app-id">
         <meta property="og:site_name" content="name">
         <meta property="og:title" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
-        <meta property="og:description" content="NoHaus Co. Mobile Barbecue - Where we're going we don't need roads.">
+        <meta property="og:description" content="Nuestros asadores son perfectos para salir de la vida de la ciudad y disfrutar de la naturaleza y el sabor del humo. Tenemos dos tamaños para adaptarnos a las necesidades de cada aventurero.">
         <meta property="og:url" content="http://www.nohaus.com.mx">
         <meta property="og:image" content="image-url">
         <meta property="og:type" content="website">
@@ -66,6 +66,9 @@
 
         <!-- Disable automatic detection of possible phone numbers in a webpage in Safari on iOS. -->
         <meta name="format-detection" content="telephone=no">
+
+        <!-- Swiper JS Styles -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
         <!-- Bootstrap Styles -->
         <link href="design/styles/vendor/bootstrap.min.css" rel="stylesheet">
@@ -218,7 +221,20 @@
                             <div class="row">
                                 <div class="col-sm-6 half">
                                     <div class="carrousel">
-                                        <img alt="NoHaus Co. logo" class="img-responsive" src="design/images/us-image-1.jpg">
+                                        <!-- Slider main container -->
+                                        <div class="swiper-container">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide"><img src="design/images/us-slide-01.jpg" alt="Slide 1" /></div>
+                                                <div class="swiper-slide"><img src="design/images/us-slide-02.jpg" alt="Slide 2" /></div>
+                                                <div class="swiper-slide"><img src="design/images/us-slide-03.jpg" alt="Slide 3" /></div>
+                                                <div class="swiper-slide"><img src="design/images/us-slide-04.jpg" alt="Slide 4" /></div>
+                                            </div>
+                                            
+                                            <!-- If we need pagination -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 half">
@@ -289,24 +305,22 @@
                                 <div class="col-sm-6">
                                     <div class="model">
                                         <div class="image">
-                                            <img alt="Big Haus imagen" class="img-responsive" src="design/images/model-big-haus.jpg">
+                                            <img alt="Big Haus imagen" class="img-responsive" src="design/images/big-haus.jpg">
                                         </div>
                                         <h3 class="name">BIG HAUS</h3>
                                         <div class="desc">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <div>El modelo mas grande, aparte del espacio de cocina y cajuela incluye una batea de 1.50 mts de largo configurable para carga de bicicletas o con caja libre para cargar las mesas y sillas NoHaus, modelo con mayor capacidad de carga y espacio de guardado. Tamaño de BigHaus 312x170 (mas 92 cm de jalon y área de arrastre)</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="model">
                                         <div class="image">
-                                            <img alt="Tiny Haus imagen" class="img-responsive" src="design/images/model-tiny-haus.jpg">
+                                            <img alt="Haus imagen" class="img-responsive" src="design/images/haus.jpg">
                                         </div>
-                                        <h3 class="name">TINY HAUS</h3>
+                                        <h3 class="name">HAUS</h3>
                                         <div class="desc">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <div>El modelo mas versátil, este modelo tiene 2 areas principales cocina y cajuela, ambas configurables con los mismos elementos que el Big Haus. Modelo perfecto para los que tienen una pickup y no requieren el espacio extra de la batea. Tamaño de Haus 170x170 cm (mas 92 cm de jalon y área de arrastre)</div>
                                         </div>
                                     </div>
                                 </div>
@@ -353,7 +367,7 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                                     </div>
                                     <div class="image">
-                                        <img alt="Contact imagen" class="img-responsive" src="design/images/us-image-1.jpg">
+                                        <img alt="Contact imagen" class="img-responsive" src="design/images/contact-image.jpg">
                                     </div>
                                 </div>
                             </div>
@@ -447,10 +461,10 @@
 
         <!-- Contact Buttons -->
         <div class="contact-btns clearfix">
-            <a href="#">
+            <a href="https://api.whatsapp.com/send?phone=525627136043&text=Me%20interesa%20NoHaus%2C%20%C2%BFPodr%C3%ADas%20env%C3%ADarme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank">
                 <img alt="Whatsapp icon" class="" src="design/images/icon-whatsapp.svg" />
             </a>
-            <a href="#">
+            <a href="tel:5627136043" target="_blank">
                 <img alt="Phone icon" class="" src="design/images/icon-phone.svg" />
             </a>
         </div>
@@ -461,6 +475,9 @@
 
         <!-- Stellar.js Scripts -->
         <script src="design/scripts/vendor/jquery.stellar.min.js"></script>
+
+        <!-- Swipper JS Scripts -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <!-- Page Scripts -->
         <script src="design/scripts/pl.js"></script>
