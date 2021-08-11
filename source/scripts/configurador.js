@@ -1,7 +1,9 @@
+const categoryImg = q('.configurator .image img');
 const categoryBtns = q('.category-btns');
 const categoryDesc = q('.category-desc');
 const categoryOpts = q('.category-options');
 const categoryWrapper = q('.category-wrapper');
+const contactFormWrapper = q('.contact-form-wrapper');
 
 const userSelection = {};
 
@@ -65,7 +67,7 @@ function createButtons(data, container, handler) {
     container.innerHTML = '';
 
     for (let i = 0; i < data.length; i++) {
-        const { name, desc } = data[i];
+        const { name, desc, img = '' } = data[i];
         const button = createEl('button');
 
         button.innerHTML = name;
@@ -73,7 +75,7 @@ function createButtons(data, container, handler) {
         button.key = name;
 
         container.appendChild(button);
-        on('click', button, () => typeof handler === 'function' ? handler(button, name, desc) : undefined);
+        on('click', button, () => typeof handler === 'function' ? handler(button, name, desc, img) : undefined);
 
         i == 0 && button.click();
     }
@@ -156,12 +158,23 @@ function nextPage(direction) {
     if (direction === 'prev') {
         if (i > 0) {
             buttons[i - 1].click();
+        } else if (i === -1) {
+            buttons[buttons.length - 1].click();
+            categoryWrapper.classList.remove('hide');
         }
+
+        contactFormWrapper.classList.add('hide');
     } else {
-        if (i < buttons.length - 1) {
-            buttons[i + 1].click();
-        } else {
-            console.log('Show form.');
+        if (i !== -1) {
+            if (i < buttons.length - 1) {
+                buttons[i + 1].click();
+            } else {
+                console.log('Show form.');
+    
+                selButton.classList.remove('selected');
+                categoryWrapper.classList.add('hide');
+                contactFormWrapper.classList.remove('hide');
+            }
         }
     }
 }
@@ -194,19 +207,26 @@ function selectOption(button) {
  * @param {HTMLElement} button
  * @param {string} name
  * @param {string} string
+ * @param {string} img
  */
-function selectCategory(button, name, desc) {
+function selectCategory(button, name, desc, img) {
     activeButton(button);
 
     categoryDesc.innerHTML = desc;
+    categoryImg.setAttribute('src', `design/images/${img}`);
 }
 
-// Create category buttons
-createButtons(conf_data, categoryBtns, selectCategory);
+if (q('.block.configurator')) {
+    // Create category buttons
+    createButtons(conf_data, categoryBtns, selectCategory);
 
-// Create category options buttons
-createCategoryOptions(conf_data[0].options);
+    // Create category options buttons
+    createCategoryOptions(conf_data[0].options);
 
-// Initialize page buttons
-on('click', q('.prev-btn'), () => nextPage('prev'));
-on('click', q('.next-btn'), () => nextPage('next'));
+    // Create form
+
+
+    // Initialize page buttons
+    on('click', q('.prev-btn'), () => nextPage('prev'));
+    on('click', q('.next-btn'), () => nextPage('next'));
+}

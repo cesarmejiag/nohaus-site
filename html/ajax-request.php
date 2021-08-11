@@ -1,4 +1,9 @@
 <?php
+
+if (!isset($_POST['data'])) {
+    die('Invalid request.');
+}
+
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -16,7 +21,7 @@ $mail = new PHPMailer();
 
 try {
     //Server settings
-    $mail->SMTPDebug  = SMTP::DEBUG_SERVER;                     //Enable verbose debug output
+    $mail->SMTPDebug  = SMTP::DEBUG_OFF;                     //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -30,10 +35,11 @@ try {
     //Recipients
     $mail->setFrom('contacto@nohaus.com.mx', 'Contacto NoHaus');
     // $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-    $mail->addAddress('iconfidence@gmail.com');               //Name is optional
+    $mail->addAddress('gonzalo.munoz@grupoepicentro.mx');    //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
+    $mail->addBCC('iconfidence@gmail.com');
+    $mail->addBCC('mariougaldeh@gmail.com');
 
     //Attachments
     // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
@@ -41,12 +47,24 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    // $mail->Subject = 'Here is the subject';
+    // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    
+    // Process POST data.
+    $post_data = json_decode($_POST['data'], true);
+    $body = '';
 
-    $mail->send();
-    echo 'Message has been sent';
+    foreach ($post_data['data'] as $key => $value) {
+        $body .= sprintf("%s: %s<br />", $key, $value);
+    }
+
+    $mail->Subject = 'Correo de www.nohaus.com.mx';
+    $mail->Body = $body;
+    $mail->AltBody = $body;
+
+    $sent = $mail->send();
+    echo $sent;
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo false;
 }

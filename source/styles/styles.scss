@@ -158,6 +158,10 @@ body {
   /* Outer wrapper */
   .outer-wrapper {
     margin-bottom: 50px;
+
+    &.margin-top {
+      margin-top: 59px;
+    }
   }
 
   /* Block */

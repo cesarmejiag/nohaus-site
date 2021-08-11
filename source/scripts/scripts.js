@@ -38,6 +38,18 @@ function expandMenu() {
 (() => {
     const options = qa('.scroll-to', navigation)
     const toggleBtn = q('.toggle-btn', navigation);
+    const scrollTo = (key) => {
+        $('html, body').animate({
+            scrollTop: $(key).offset().top - navigation.clientHeight
+        }, 375);
+    };
+
+    const hasHash = () => {
+        if (location.hash) {
+            const key = location.hash.substring(location.hash.indexOf('#')).replace('/', '');
+            scrollTo(key);
+        }
+    }
 
     [].forEach.call(options, option => {
         option.addEventListener('click', e => {
@@ -45,14 +57,14 @@ function expandMenu() {
             const href = e.currentTarget.href
             const key = href.substring(href.indexOf('#')).replace('/', '');
 
-            $('html, body').animate({
-                scrollTop: $(key).offset().top - navigation.clientHeight
-            }, 375);
+            scrollTo(key);
         });
     });
 
     toggleBtn.addEventListener('click', expandMenu);
     changeNavColor();
+
+    window.addEventListener('load', hasHash);
 })();
 
 // Contact Form
@@ -65,7 +77,14 @@ function expandMenu() {
 
     const settings = {
         url: 'ajax-request.php',
-        useAjax: true
+        useAjax: true,
+        inputSelectors: [
+            "input[type=text]",
+            "input[type=checkbox]",
+            "input[type=radio]",
+            "select",
+            "textarea"
+        ]
     };
 
     const form = new pl.ContactForm(formElement, settings);

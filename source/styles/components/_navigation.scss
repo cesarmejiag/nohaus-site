@@ -142,10 +142,11 @@
       position: fixed;
       transform: translateY(-100%);
       transition: opacity 375ms, transform 375ms;
-      top: 59px;
+      top: 0;
       width: 100%;
       &.list-expanded {
         opacity: .95;
+        top: 59px;
         transform: translateY(0);
         z-index: 1;
       }

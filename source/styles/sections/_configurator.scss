@@ -3,11 +3,24 @@
   font-size: 14px;
 
   &.block.halves::before {
-    width: 20%;
+    width: 27%;
   }
 
   &.block.halves::after {
     content: none;
+  }
+
+  .image {
+    margin-top: 45%;
+    position: relative;
+
+    img {
+      height: auto;
+      max-width: 125%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 
   .category-btns {
@@ -38,6 +51,11 @@
   .category-desc {
     margin-bottom: 50px;
     text-align: center;
+  }
+
+  .contact-form-wrapper,
+  .category-wrapper {
+    margin-bottom: 100px;
   }
 
   .category-title {
@@ -73,7 +91,6 @@
 
   .option-wrapper {
     display: none;
-    margin-bottom: 100px;
 
     &.visible {
       display: block;
@@ -124,9 +141,9 @@
       justify-content: flex-end;
 
       .text {
-        display: flex;;
+        display: flex;
         flex-direction: column-reverse;
-        
+
         div:nth-child(1) {
           min-height: 45px;
           text-align: center;
@@ -169,10 +186,11 @@
       border: none;
       cursor: pointer;
       display: flex;
+      user-select: none;
       text-transform: uppercase;
 
       &.disabled {
-        opacity: .5;
+        opacity: 0.5;
         pointer-events: none;
       }
     }
@@ -196,6 +214,79 @@
     .next-btn::after {
       background-image: url("../images/icon-next.svg");
       margin-left: 15px;
+    }
+  }
+
+  .contact-form {
+    .input-group {
+      .control {
+        margin: 0 auto 6px;
+      }
+
+      .text {
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .configurator {
+    &.block.halves {
+      .half {
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+        &:last-child::before {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .image {
+      margin-top: 0;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        position: static;
+        right: auto;
+        top: auto;
+      }
+    }
+
+    .contact-form-wrapper,
+    .category-wrapper {
+      margin-bottom: 40px;
+    }
+
+    .category-options {
+      button {
+        margin: 0 5px 10px;
+      }
+    }
+
+    .option-wrapper.option-colores {
+      .option-control {
+        width: 50%;
+      }
+    }
+
+    .option-wrapper.option-accesorios {
+      .option-control {
+        width: 100%;
+      }
+    }
+
+    .option-control {
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
+    .page-btns {
+      margin-bottom: 30px;
     }
   }
 }

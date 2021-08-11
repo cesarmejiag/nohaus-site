@@ -53,6 +53,35 @@
     }
   }
 
+
+  .link-wrapper {
+    margin: 60px 0 40px;
+
+    a {
+      appearance: none;
+      background-color: #00524c;
+      border: none;
+      border-radius: 0;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-family: "MC Milton";
+      letter-spacing: 4px;
+      margin: 0 auto;
+      max-width: 255px;
+      padding: 8px 5px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 375ms;
+      width: 100%;
+      &:hover,
+      &:focus {
+        background-color: #EE7623;
+      }
+    }
+  }
+
   .logo {
     margin: 40px auto 0;
     max-width: 49px;

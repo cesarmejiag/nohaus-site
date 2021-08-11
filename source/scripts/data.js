@@ -2,10 +2,12 @@ const conf_data = [
     {
         "name": "Big Haus",
         "desc": "<p>El modelo más grande, aparte del espacio de cocina y cajuela incluye una batea de 1.50 mts de largo configurable para carga de bicicletas o con caja libre para cargar las mesas y sillas o Haus, modelo con mayor capacidad de carga y espacio de guardado.</p><p><b>Tamaño: 312x170 (más 92 cm de jalon y área de arrastre)</b></p>",
+        "img": "configurator-bighaus.jpg",
         "options": [
             {
                 "name": "Cocina",
                 "desc": "Espacio trasero el Haus, tiene 3 secciones que se pueden configurar con los siguientes tipos de cocción:",
+                "img": "bighaus-cocina.png",
                 "options": [
                     {
                         "name": "Ahumador",
@@ -32,6 +34,7 @@ const conf_data = [
             {
                 "name": "Cajuela",
                 "desc": "Espacio frontal del Haus, en este espacio tenemos la mesa retráctil de trabajo y dos áreas de guardado donde podemos poner las siguientes configuraciones:",
+                "img": "bighaus-cajuela.png",
                 "options": [
                     {
                         "name": "Hielera",
@@ -58,6 +61,7 @@ const conf_data = [
             {
                 "name": "Batea",
                 "desc": "Área central del Big Haus, recubierta de acero antiderrapante y con orejas para eslingas para asegurar la carga, en esta área podemos tener los siguientes modificadores:",
+                "img": "bighaus-batea.png",
                 "options": [
                     {
                         "name": "Rack de Bicicletas",
@@ -72,6 +76,7 @@ const conf_data = [
             {
                 "name": "Colores",
                 "desc": "Tenemos 3 colores básicos pero podemos pintarlo según diseño para que acompañe mejor al vehículo con el que lo arrastrarás.",
+                "img": "bighaus-colores.png",
                 "options": [
                     {
                         "name": "Tormenta del desierto",
@@ -90,6 +95,7 @@ const conf_data = [
             {
                 "name": "Accesorios",
                 "desc": "La personalización de la experiencia con tu Haus no termina en estas áreas, también puedes escoger los accesorios que mejor vayan con tus viajes:",
+                "img": "",
                 "options": [
                     {
                         "name": "Funda para guardado"
@@ -134,10 +140,12 @@ const conf_data = [
     {
         "name": "Haus",
         "desc": "<p>El modelo más grande, aparte del espacio de cocina y cajuela incluye una batea de 1.50 mts de largo configurable para carga de bicicletas o con caja libre para cargar las mesas y sillas o Haus, modelo con mayor capacidad de carga y espacio de guardado.</p><p><b>Tamaño: 312x170 (más 92 cm de jalon y área de arrastre)</b></p>",
+        "img": "configurator-haus.jpg",
         "options": [
             {
                 "name": "Cocina",
                 "desc": "Espacio trasero el Haus, tiene 3 secciones que se pueden configurar con los siguientes tipos de cocción:",
+                "img": "haus-cocina.png",
                 "options": [
                     {
                         "name": "Ahumador",
@@ -164,6 +172,7 @@ const conf_data = [
             {
                 "name": "Cajuela",
                 "desc": "Espacio frontal del Haus, en este espacio tenemos la mesa retráctil de trabajo y dos áreas de guardado donde podemos poner las siguientes configuraciones:",
+                "img": "haus-cajuela.png",
                 "options": [
                     {
                         "name": "Hielera",
@@ -190,6 +199,7 @@ const conf_data = [
             {
                 "name": "Batea",
                 "desc": "Área central del Big Haus, recubierta de acero antiderrapante y con orejas para eslingas para asegurar la carga, en esta área podemos tener los siguientes modificadores:",
+                "img": "haus-batea.png",
                 "options": [
                     {
                         "name": "Rack de Bicicletas",
@@ -204,6 +214,7 @@ const conf_data = [
             {
                 "name": "Colores",
                 "desc": "Tenemos 3 colores básicos pero podemos pintarlo según diseño para que acompañe mejor al vehículo con el que lo arrastrarás.",
+                "img": "haus-colores.png",
                 "options": [
                     {
                         "name": "Tormenta del desierto",
@@ -222,6 +233,7 @@ const conf_data = [
             {
                 "name": "Accesorios",
                 "desc": "La personalización de la experiencia con tu Haus no termina en estas áreas, también puedes escoger los accesorios que mejor vayan con tus viajes:",
+                "img": "",
                 "options": [
                     {
                         "name": "Funda para guardado"

@@ -59,6 +59,14 @@
     visibility: hidden !important;
   }
 
+  h2 {
+    font-size: 17px;
+    margin: 0 auto 60px;
+    max-width: 360px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   .input-container {
     margin-bottom: 15px;
     &.invalid {
@@ -69,6 +77,47 @@
       }
 
       label {
+        color: #EE7623;
+      }
+    }
+  }
+
+  .input-group {
+    legend {
+      border: none;
+      color: #00524C;
+      font-size: inherit;
+      margin-bottom: 25px;
+      transition: color 375ms;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    input[type=radio] {
+      display: none;
+      visibility: hidden;
+
+      &:checked {
+        & ~ .control {
+          background-color: #ee7623;
+        }
+      }
+    }
+
+    .control {
+      border: 1px solid #00524c;
+      border-radius: 5em;
+      flex-shrink: 0;
+      height: 18px;
+      margin-right: 10px;
+      margin-top: 5px;
+      width: 18px;
+    }
+
+    &.invalid {
+      legend {
         color: #EE7623;
       }
     }
