@@ -81,6 +81,24 @@
       margin: 0 25px 10px;
       opacity: 0.5;
       padding: 0 10px;
+      position: relative;
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+
+      &::after {
+        background: no-repeat center center url("../images/icon-right-chevron.svg");
+        content: "";
+        display: block;
+        height: 10px;
+        position: absolute;
+        right: -32px;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 10px;
+      }
 
       &.selected {
         border-bottom: 2px solid #ee7623;

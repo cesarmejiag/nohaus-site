@@ -6,7 +6,7 @@ const conf_data = [
         "options": [
             {
                 "name": "Cocina",
-                "desc": "Espacio trasero el Haus, tiene 3 secciones que se pueden configurar con los siguientes tipos de cocción:",
+                "desc": "Espacio trasero el Haus, tiene 3 secciones que se pueden configurar con los siguientes tipos de cocción (máximo 3):",
                 "img": "bighaus-cocina.png",
                 "options": [
                     {
@@ -28,6 +28,21 @@ const conf_data = [
                     {
                         "name": "Big Green Egg",
                         "desc": "Horno de cerámica tipo Komodo, estos hornos en la medida Large nos ayudan a mantener temperaturas altas constantes sin necesidad de recargar carbón."
+                    }
+                ]
+            },
+            {
+                "name": "Batea",
+                "desc": "Área central del Big Haus, recubierta de acero antiderrapante y con orejas para eslingas para asegurar la carga, en esta área podemos tener los siguientes modificadores:",
+                "img": "bighaus-batea.png",
+                "options": [
+                    {
+                        "name": "Rack de Bicicletas",
+                        "desc": "Tubos removibles para soporte de bicicletas, se puede configurar dependiendo del tamaño de llanta que se use para una mayor sujeción de estas."
+                    },
+                    {
+                        "name": "Rack de Motocicletas",
+                        "desc": "Tubos removibles para soporte de motocicletas, se puede configurar dependiendo del tamaño de llanta que se use para una mayor sujeción de estas."
                     }
                 ]
             },
@@ -55,21 +70,6 @@ const conf_data = [
                     {
                         "name": "Bar Pack",
                         "desc": "Sistema de guardado de shaker y equipo de bar para una experiencia de bebidas outdoors."
-                    }
-                ]
-            },
-            {
-                "name": "Batea",
-                "desc": "Área central del Big Haus, recubierta de acero antiderrapante y con orejas para eslingas para asegurar la carga, en esta área podemos tener los siguientes modificadores:",
-                "img": "bighaus-batea.png",
-                "options": [
-                    {
-                        "name": "Rack de Bicicletas",
-                        "desc": "Tubos removibles para soporte de bicicletas, se puede configurar dependiendo del tamaño de llanta que se use para una mayor sujeción de estas."
-                    },
-                    {
-                        "name": "Rack de Motocicletas",
-                        "desc": "Tubos removibles para soporte de motocicletas, se puede configurar dependiendo del tamaño de llanta que se use para una mayor sujeción de estas."
                     }
                 ]
             },
@@ -170,6 +170,21 @@ const conf_data = [
                 ]
             },
             {
+                "name": "Batea",
+                "desc": "Área central del Big Haus, recubierta de acero antiderrapante y con orejas para eslingas para asegurar la carga, en esta área podemos tener los siguientes modificadores:",
+                "img": "haus-batea.png",
+                "options": [
+                    {
+                        "name": "Rack de Bicicletas",
+                        "desc": "Tubos removibles para soporte de bicicletas, se puede configurar dependiendo del tamaño de llanta que se use para una mayor sujeción de estas."
+                    },
+                    {
+                        "name": "Rack de Motocicletas",
+                        "desc": "Tubos removibles para soporte de motocicletas, se puede configurar dependiendo del tamaño de llanta que se use para una mayor sujeción de estas."
+                    }
+                ]
+            },
+            {
                 "name": "Cajuela",
                 "desc": "Espacio frontal del Haus, en este espacio tenemos la mesa retráctil de trabajo y dos áreas de guardado donde podemos poner las siguientes configuraciones:",
                 "img": "haus-cajuela.png",
@@ -193,21 +208,6 @@ const conf_data = [
                     {
                         "name": "Bar Pack",
                         "desc": "Sistema de guardado de shaker y equipo de bar para una experiencia de bebidas outdoors."
-                    }
-                ]
-            },
-            {
-                "name": "Batea",
-                "desc": "Área central del Big Haus, recubierta de acero antiderrapante y con orejas para eslingas para asegurar la carga, en esta área podemos tener los siguientes modificadores:",
-                "img": "haus-batea.png",
-                "options": [
-                    {
-                        "name": "Rack de Bicicletas",
-                        "desc": "Tubos removibles para soporte de bicicletas, se puede configurar dependiendo del tamaño de llanta que se use para una mayor sujeción de estas."
-                    },
-                    {
-                        "name": "Rack de Motocicletas",
-                        "desc": "Tubos removibles para soporte de motocicletas, se puede configurar dependiendo del tamaño de llanta que se use para una mayor sujeción de estas."
                     }
                 ]
             },

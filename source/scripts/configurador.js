@@ -25,11 +25,21 @@ function createEl(tagName) {
 /**
  * Attach handler to an element when event occurs.
  * @param {string} events 
- * @param {HTMLElement} el 
+ * @param {HTMLElement} els 
  * @param {function} handler 
  */
-function on(events, el, handler) {
-    el.addEventListener(events, handler);
+function on(events, els, handler) {
+    const eventsArr = events.split(' ');
+
+    eventsArr.forEach(event => {
+        if (els.length) {
+            for (let i = 0; i < els.length; i++) {
+                els[i].addEventListener(event, handler);
+            }
+        } else {
+            els.addEventListener(event, handler);
+        }
+    });
 }
 
 /**
@@ -140,6 +150,22 @@ function createCategoryOptions(cOptions) {
         `
 
         categoryWrapper.appendChild(wrapper);
+
+        const inputs = qa('input[type="checkbox"], input[type="radio"]', wrapper);
+
+        if (inputs.length > 0) {
+            on('change', inputs, ({ target }) => {
+                const { name } = target;
+
+                if (name === 'cocina') {
+                    const inputsSelected = qa(`input[name="${name}"]:checked`);
+                    
+                    if (inputsSelected.length > 3) {
+                        target.checked = false;
+                    }
+                }
+            });
+        }
     }
 
     createButtons(cOptions, categoryOpts, selectOption);
@@ -154,7 +180,7 @@ function nextPage(direction) {
     const selButton = q('.category-options button.selected');
 
     const i = [].indexOf.call(buttons, selButton);
-    
+
     if (direction === 'prev') {
         if (i > 0) {
             buttons[i - 1].click();
@@ -170,7 +196,7 @@ function nextPage(direction) {
                 buttons[i + 1].click();
             } else {
                 console.log('Show form.');
-    
+
                 selButton.classList.remove('selected');
                 categoryWrapper.classList.add('hide');
                 contactFormWrapper.classList.remove('hide');
@@ -182,10 +208,12 @@ function nextPage(direction) {
 /**
  * Handle option select.
  * @param {HTMLElement} button
+ * @param {string} name
  * @param {string} desc
+ * @param {string} img
  * @param {object[]} oOptions
  */
-function selectOption(button) {
+function selectOption(button, name, desc, img) {
     const key = button.key;
     const oWrappers = qa('.option-wrapper');
 
@@ -200,6 +228,11 @@ function selectOption(button) {
             wrapper.classList.remove('visible');
         }
     }
+
+    if (img) {
+        const model = userSelection.modelo.replace(/\s/g, '').toLowerCase();
+        categoryImg.setAttribute('src', `design/images/${model}-${name.toLowerCase()}.png`);
+    }
 }
 
 /**
@@ -213,7 +246,13 @@ function selectCategory(button, name, desc, img) {
     activeButton(button);
 
     categoryDesc.innerHTML = desc;
-    categoryImg.setAttribute('src', `design/images/${img}`);
+    userSelection['modelo'] = name;
+
+    // Return to first button when user changes category and reset form.
+    if (categoryOpts.children.length > 0) {
+        categoryOpts.children[0].click();
+    }
+
 }
 
 if (q('.block.configurator')) {
@@ -222,9 +261,6 @@ if (q('.block.configurator')) {
 
     // Create category options buttons
     createCategoryOptions(conf_data[0].options);
-
-    // Create form
-
 
     // Initialize page buttons
     on('click', q('.prev-btn'), () => nextPage('prev'));
