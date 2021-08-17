@@ -139,7 +139,7 @@ const conf_data = [
     },
     {
         "name": "Haus",
-        "desc": "<p>El modelo más grande, aparte del espacio de cocina y cajuela incluye una batea de 1.50 mts de largo configurable para carga de bicicletas o con caja libre para cargar las mesas y sillas o Haus, modelo con mayor capacidad de carga y espacio de guardado.</p><p><b>Tamaño: 312x170 (más 92 cm de jalon y área de arrastre)</b></p>",
+        "desc": "<p>El modelo mas versátil, este modelo tiene 2 areas principales cocina y cajuela, ambas configurables con los mismos elementos que el Big Haus.</p><p>Modelo perfecto para los que tienen una pickup y no requieren el espacio extra de la batea.</p><p><b>Tamaño de Haus 170x170 cm (mas 92 cm de jalon y área de arrastre)</b></p>",
         "img": "configurator-haus.jpg",
         "options": [
             {
