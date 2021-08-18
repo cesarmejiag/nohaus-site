@@ -283,6 +283,10 @@
     .category-options {
       button {
         margin: 0 5px 10px;
+
+        &::after {
+          right: -12px;
+        }
       }
     }
 

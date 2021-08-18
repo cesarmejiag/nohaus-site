@@ -1,12 +1,12 @@
 const conf_data = [
     {
         "name": "Big Haus",
-        "desc": "<p>El modelo más grande, aparte del espacio de cocina y cajuela incluye una batea de 1.50 mts de largo configurable para carga de bicicletas o con caja libre para cargar las mesas y sillas o Haus, modelo con mayor capacidad de carga y espacio de guardado.</p><p><b>Tamaño: 312x170 (más 92 cm de jalon y área de arrastre)</b></p>",
+        "desc": "<p>El modelo más grande, aparte del espacio de cocina y cajuela incluye una batea de 1.50 mts de largo configurable para carga de bicicletas o con caja libre para cargar las mesas y sillas o Haus, modelo con mayor capacidad de carga y espacio de guardado.</p><p><b>Tamaño: 312x170 (más 92 cm de jalón y área de arrastre)</b></p>",
         "img": "configurator-bighaus.jpg",
         "options": [
             {
                 "name": "Cocina",
-                "desc": "Espacio trasero el Haus, tiene 3 secciones que se pueden configurar con los siguientes tipos de cocción (máximo 3):",
+                "desc": "Espacio trasero el Haus, tiene 3 secciones que se pueden configurar con los siguietens tipos de cocción (selecciona máximo 3):",
                 "img": "bighaus-cocina.png",
                 "options": [
                     {
@@ -15,7 +15,7 @@ const conf_data = [
                     },
                     {
                         "name": "Parrilla",
-                        "desc": "Parrilla de acero al carbón que ayuda a tener los alimentos cercanos al fuego para una cocción rápida y sabores de carbón directo."
+                        "desc": "Parrilla de acero al carbón que ayuda a tener los alimentos cercanos al fuego para una cocción rápida y sabores de carbón directo."
                     },
                     {
                         "name": "Plancha",
@@ -48,7 +48,7 @@ const conf_data = [
             },
             {
                 "name": "Cajuela",
-                "desc": "Espacio frontal del Haus, en este espacio tenemos la mesa retráctil de trabajo y dos áreas de guardado donde podemos poner las siguientes configuraciones:",
+                "desc": "Espacio frontal del Haus, en este espacio tenemos la mesa retráctil de trabajo y dos áreas de guardado donde podemos poner las siguientes configuraciones:",
                 "img": "bighaus-cajuela.png",
                 "options": [
                     {
@@ -65,7 +65,7 @@ const conf_data = [
                     },
                     {
                         "name": "Cafetera",
-                        "desc": "Paquete de cafetera nespresso y caja de guardado de tazas (es necesario tener la batería para su funcionamiento)."
+                        "desc": "Paquete de cafetera nespresso y caja de guardado de tazas (es necesario tener la batería para su funcionamiento)."
                     },
                     {
                         "name": "Bar Pack",
@@ -144,7 +144,7 @@ const conf_data = [
         "options": [
             {
                 "name": "Cocina",
-                "desc": "Espacio trasero el Haus, tiene 3 secciones que se pueden configurar con los siguientes tipos de cocción:",
+                "desc": "Espacio trasero el Haus, tiene 3 secciones que se pueden configurar con los siguietens tipos de cocción (selecciona máximo 3):",
                 "img": "haus-cocina.png",
                 "options": [
                     {
@@ -153,7 +153,7 @@ const conf_data = [
                     },
                     {
                         "name": "Parrilla",
-                        "desc": "Parrilla de acero al carbón que ayuda a tener los alimentos cercanos al fuego para una cocción rápida y sabores de carbón directo."
+                        "desc": "Parrilla de acero al carbón que ayuda a tener los alimentos cercanos al fuego para una cocción rápida y sabores de carbón directo."
                     },
                     {
                         "name": "Plancha",
@@ -186,7 +186,7 @@ const conf_data = [
             },
             {
                 "name": "Cajuela",
-                "desc": "Espacio frontal del Haus, en este espacio tenemos la mesa retráctil de trabajo y dos áreas de guardado donde podemos poner las siguientes configuraciones:",
+                "desc": "Espacio frontal del Haus, en este espacio tenemos la mesa retráctil de trabajo y dos áreas de guardado donde podemos poner las siguientes configuraciones:",
                 "img": "haus-cajuela.png",
                 "options": [
                     {
@@ -203,7 +203,7 @@ const conf_data = [
                     },
                     {
                         "name": "Cafetera",
-                        "desc": "Paquete de cafetera nespresso y caja de guardado de tazas (es necesario tener la batería para su funcionamiento)."
+                        "desc": "Paquete de cafetera nespresso y caja de guardado de tazas (es necesario tener la batería para su funcionamiento)."
                     },
                     {
                         "name": "Bar Pack",

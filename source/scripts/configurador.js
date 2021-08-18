@@ -195,8 +195,6 @@ function nextPage(direction) {
             if (i < buttons.length - 1) {
                 buttons[i + 1].click();
             } else {
-                console.log('Show form.');
-
                 selButton.classList.remove('selected');
                 categoryWrapper.classList.add('hide');
                 contactFormWrapper.classList.remove('hide');

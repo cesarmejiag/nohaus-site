@@ -88,6 +88,9 @@
         text-transform: uppercase;
         transition: background 375ms;
         width: 100%;
+        &::after {
+          content: none;
+        }
       }
     }
   }

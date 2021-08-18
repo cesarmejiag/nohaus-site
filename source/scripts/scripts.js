@@ -14,6 +14,23 @@ if ("serviceWorker" in navigator) {
 const q = (selector, target) => (target || document).querySelector(selector);
 const qa = (selector, target) => (target || document).querySelectorAll(selector);
 
+const gaEvent = (category, action, label = '') => {
+    if (!category && !action) {
+        throw `Can't send event to Google Analtyics`;
+    }
+
+    if (typeof gtag === 'undefined') {
+        throw `No gtag defined`;
+    }
+
+    console.log(`gtag: [Action: ${action}, Category: ${category}, Label: ${label}]`);
+
+    gtag('event', action, {
+        'event_category': category,
+        'event_label': label
+    });
+}
+
 
 // Globals
 const navigation = q('.navigation');
@@ -107,25 +124,45 @@ function expandMenu() {
     // Notify when form is sending a message.
     form.sending.add(() => {
         changeFormState('loading', 'Enviando mensaje...');
+        gaEvent('Formulario', 'Enviando mensaje');
     });
 
     // Notify if an error occured with the request. 
     form.error.add(() => {
         changeFormState('error', 'Hubo un error al enviar tu correo, inténtalo nuevamente.');
         removeMessage();
+        gaEvent('Formulario', 'Envío con error');
     });
 
     // Notify if the request was successfully resolved.
     form.success.add((response) => {
         if (response == 1) {
             changeFormState('success', 'Mensaje enviado');
+            gaEvent('Formulario', 'Envío exitoso')
             form.reset();
         } else {
             changeFormState('error', 'Hubo un error al enviar tu correo, inténtalo nuevamente.');
+            gaEvent('Formulario', 'Envío con error');
         }
 
         removeMessage();
     });
+})();
+
+
+// Google analytics events
+(() => {
+    const els = qa('[data-gaaction]');
+
+    for (let i = 0; i < els.length; i++) {
+        els[i].addEventListener('click', e => {
+            const category = e.target.dataset['gacategory'];
+            const action = e.target.dataset['gaaction'];
+            const label = e.target.dataset['galabel'];
+
+            gaEvent(category, action, label);
+        });
+    }
 })();
 
 
